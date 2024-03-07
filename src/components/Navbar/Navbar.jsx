@@ -15,9 +15,9 @@ const Navbar = () => {
         <Link to='/' className='nav-item nav-logo'>
             <img src={Logo} alt='logo' />
         </Link>
-        <Link to='/' className='nav-item nav btn'>About</Link>
-        <Link to='/' className='nav-item nav btn'>products</Link>
-        <Link to='/' className='nav-item nav btn'>For Teams</Link>
+        <Link to='/' className='nav-item nav-btn'>About</Link>
+        <Link to='/' className='nav-item nav-btn'>products</Link>
+        <Link to='/' className='nav-item nav-btn'>For Teams</Link>
         <form>
             <input type='text' placeholder='Search...' />
             <img src={Search} alt='search' width={18} className='search-icon'/>

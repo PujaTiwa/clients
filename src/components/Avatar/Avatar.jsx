@@ -13,7 +13,7 @@ const Avatar = ({ children, backgroundColor, px, py, color, borderRadius,fontSiz
   }
   return (
     <div style={style}>
-      { children}
+      { children }
     </div>
   )
 }
