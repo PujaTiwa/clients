@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import upvote from '../../assets/sort-up-solid.svg';
 import downvote from '../../assets/sort-down-solid.svg';
-import Avatar from "../../components/Avatar/Avatar";
-import DisplayAnswer from './DisplayAnswer';
+import Avatar from "../../components/Avatar/Avatar.jsx";
+import DisplayAnswer from './DisplayAnswer.jsx';
 import './Questions.css';
 
 
@@ -91,20 +91,20 @@ const QuestionsDetails = () => {
                             ))
                           }
                         </div>
-                        <div className='question-action-user'>
+                        <div className='question-actions-user'>
                           <div>
                             <button type='button'>Share</button>
                             <button type='button'>Delete</button>
                           </div>
-                        </div>
-                        <div>
-                          <p>asked {question.askedOn}</p>
-                          <Link to={`/User/${question.userId}`} className='user-link' style={{color:'#0086d8'}}>
-                            <Avatar backgroundColor="orange" px="8px" py="5px">{question.userPosted.charAt(0).toUpperCase()}</Avatar>
-                            <div>
-                              {question.userPosted}
-                            </div>
-                          </Link>
+                          <div>
+                            <p>asked {question.askedOn}</p>
+                            <Link to={`/User/${question.userId}`} className='user-link' style={{ color: '#0086d8' }}>
+                              <Avatar backgroundColor="orange" px="8px" py="5px">{question.userPosted.charAt(0).toUpperCase()}</Avatar>
+                              <div>
+                                {question.userPosted}
+                              </div>
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -129,8 +129,8 @@ const QuestionsDetails = () => {
                         question.questionTags.map((tag) => (
                           <Link to='/Tags' key={tag} className='ans-tags'>{tag}</Link>
                         ))
-                      } or 
-                      <Link to={'/AskQuestion'} style={{textDecoration:"none", color:"#009dff"}}>ask your own question.</Link>
+                      } or
+                      <Link to={'/AskQuestion'} style={{ textDecoration: "none", color: "#009dff" }}> ask your own question.</Link>
                     </p>
                   </section>
                 </div>
